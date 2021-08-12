@@ -23,7 +23,10 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    
+    - name: test
+      run: pwd
+    - name: test2
+      run: ls /app/build/outputs/apk/release
     - name: run App Center Distribute
       uses: wzieba/AppCenter-Github-Action@v1
       with:
