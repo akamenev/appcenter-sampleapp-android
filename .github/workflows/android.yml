@@ -28,7 +28,7 @@ jobs:
     - name: test3
       run: ls
     - name: test4
-      run: ls app
+      run: ls app/build
     - name: test2
       run: ls /app/build/outputs/apk/release
     - name: run App Center Distribute
