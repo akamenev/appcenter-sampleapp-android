@@ -23,20 +23,20 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: test
-      run: pwd
-    - name: test3
-      run: ls
-    - name: test4
-      run: ls app/build/outputs/apk/release
-    - name: test2
-      run: ls /app/build/outputs/apk/release
+#     - name: test
+#       run: pwd
+#     - name: test3
+#       run: ls
+#     - name: test4
+#       run: ls app/build/outputs/apk/release
+#     - name: test2
+#       run: ls /app/build/outputs/apk/release
     - name: run App Center Distribute
       uses: wzieba/AppCenter-Github-Action@v1
       with:
         appName: first-flight/appcenter-sample
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: Collaborators
-        file: app/build/outputs/apk/release/app-release.apk
+        file: app/build/outputs/apk/release/app-release-unsigned.apk
         notifyTesters: false
         debug: false
