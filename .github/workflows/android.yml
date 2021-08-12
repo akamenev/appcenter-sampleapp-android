@@ -25,7 +25,11 @@ jobs:
       run: ./gradlew build
     
     - name: run App Center Distribute
-      uses: joabalea/App-Center-action@v1.0.2
+      uses: wzieba/AppCenter-Github-Action@v1
       with:
-        command: appcenter distribute groups publish --app first-flight/appcenter-sample --file app/build/outputs/apk/release/app-release.apk --group "Collaborators"
+        appName: first-flight/appcenter-sample
         token: ${{secrets.APP_CENTER_TOKEN}}
+        group: Collaborators
+        file: app/build/outputs/apk/release/app-release.apk
+        notifyTesters: false
+        debug: false
