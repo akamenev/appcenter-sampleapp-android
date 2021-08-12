@@ -25,6 +25,8 @@ jobs:
       run: ./gradlew build
     - name: test
       run: pwd
+    - name: test3
+      run: ls
     - name: test2
       run: ls /app/build/outputs/apk/release
     - name: run App Center Distribute
