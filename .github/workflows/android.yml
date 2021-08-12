@@ -34,7 +34,7 @@ jobs:
     - name: run App Center Distribute
       uses: wzieba/AppCenter-Github-Action@v1
       with:
-        appName: first-flight/appcenter-sample
+        appName: first-light/appcenter-sample
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: Collaborators
         file: app/build/outputs/apk/release/app-release-unsigned.apk
