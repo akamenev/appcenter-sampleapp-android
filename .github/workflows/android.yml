@@ -22,7 +22,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew clean :app:assembleRelease
+      run: ./gradlew clean :app:assembleRelease :app:bundleRelease 
 #     - name: test
 #       run: pwd
 #     - name: test3
