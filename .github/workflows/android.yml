@@ -23,3 +23,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    
+    - name: run App Center Distribute
+      uses: joabalea/App-Center-action@v1.0.2
+      with:
+        command: appcenter distribute groups publish --app first-flight/appcenter-sample --file app/build/outputs/apk/release/app-release.apk --group "Collaborators"
+        token: ${{secrets.APP_CENTER_TOKEN}}
