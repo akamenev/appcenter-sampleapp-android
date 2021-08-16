@@ -42,6 +42,6 @@ jobs:
         appName: first-light/appcenter-sample
         token: ${{secrets.APP_CENTER_TOKEN}}
         group: Collaborators
-        file: app/build/outputs/apk/release/app-release-signed.apk
+        file: app/build/outputs/apk/release/app-release-unsigned-signed.apk
         notifyTesters: false
         debug: false
