@@ -168,7 +168,7 @@ jobs:
       framework: uitest
       uitestBuildDir: $(Build.ArtifactStagingDirectory)/GeneratedTest/AppCenter.UITest.Android/bin/Release
       uitestStoreFile: ''
-      serverEndpoint: f76ba873-ffb8-42fc-b7ef-e1d2b33b3a91
+      serverEndpoint: AppCenter
       appSlug: first-light/appcenter-sample
       devices: any_top_1_device
       series: launch-tests
@@ -178,7 +178,7 @@ jobs:
     displayName: Create distribution
     condition: and(succeeded(), ne(variables['Build.Reason'], 'pullRequest'))
     inputs:
-      serverEndpoint: f76ba873-ffb8-42fc-b7ef-e1d2b33b3a91
+      serverEndpoint: AppCenter
       appSlug: first-light/appcenter-sample
       destinationGroupIds: 00000000-0000-0000-0000-000000000000
       isSilent: False
